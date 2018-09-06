@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+ <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black; ">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">Pizza Maker</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active">
+                         <a href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="crear.html">Crear</a>
+                        </li>                
+                        <li class="nav-item active">
+                            <a href="#">Consultar</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="#">Modificar</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="#">Borrar</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav> 
+        
+        
+            <form>
+                    <div class="form-group">
+                        <div class="col-md-6 mb-3">
+                            <label for="nameID">Nombre</label>
+                            <input type="tel" class="form-control" id="nameID" maxlength="150" placeholder="Enter your name">
+                            <small id="nameHelp" class="form-text text-muted">Ingresa primer y segundo nombre</small>
+                        </div>  
+                        <div class="col-md-6 mb-3">
+                                <label for="apellidoID">Apellido</label>
+                                <input type="tel" class="form-control" id="apellidoID" maxlength="150" aria-describedby="emailHelp" placeholder="Enter your lastname">
+                                <small id="lastnameHelp" class="form-text text-muted">Ingresa tus apellidos</small>
+                            </div>  
+                    </div>
+                   <br><br><div class="form-group">
+                        <div class="col-md-8 mb-3"> 
+                            <label for="receta">Nombre de la recta</label>
+                            <input type="text" class="form-control" id="receta" maxlength="150" placeholder="Recipe ID">
+                            <small id="recetaHelp" class="form-text text-muted">Ingresa el nombre de tu receta</small>
+                        </div>
+                        <div class="col-md-4 mb-3"> 
+                                <label for="recetaID">Nombre de la recta</label>
+                                <input type="text" class="form-control" id="recetaID" maxlength="3" placeholder="Recipe ID">
+                                <small id="recetaIDHelp" class="form-text text-muted">Ingresa un numero como ID</small>
+                            </div>
+                    </div>
+                    <br><br><div class="row" >
+                            <legend class="col-form-label col-sm-6 pt-0">Tamaño de la pizza</legend>
+                            <legend class="col-form-label col-sm-6 pt-0">Forma de la pizza</legend>
+                            <div class="col-sm-12">
+                              <div class="form-check col-md-6">
+                                <input class="form-check-input" type="radio" name="gridTamaños"  id="tamañoGrande" value="0" checked>
+                                <label class="form-check-label" for="tamañoGrande">
+                                  Grande
+                                </label>
+                              </div>
+                              <div class="form-check col-md-6">
+                                <input class="form-check-input" type="radio" name="gridFormas" id="formaCircular" value="0" checked>
+                                <label class="form-check-label" for="formaCircular">
+                                  Circular
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row" >
+                                <div class="col-sm-12">
+                                  <div class="form-check col-md-6">
+                                    <input class="form-check-input" type="radio" name="gridTamaños"  id="tamañoMediano" value="1" >
+                                    <label class="form-check-label" for="tamañoMediano">
+                                      Mediana
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-6">
+                                    <input class="form-check-input" type="radio" name="gridFormas" id="formaCuadrada" value="1">
+                                    <label class="form-check-label" for="formaCuadrada">
+                                      Cuadrada
+                                    </label>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row" >
+                                    <div class="col-sm-12">
+                                      <div class="form-check col-md-6">
+                                        <input class="form-check-input" type="radio" name="gridTamaños"  id="tamañoPequeño" value="2" >
+                                        <label class="form-check-label" for="tamañoPequeño">
+                                          Pequeña
+                                        </label>
+                                      </div>
+                                      <div class="form-check col-md-6">
+                                        <input class="form-check-input" type="radio" name="gridFormas" id="formaRectangular" value="2">
+                                        <label class="form-check-label" for="formaRectangular">
+                                          Rectangular
+                                        </label>
+                                      </div>
+                                    </div>
+                                </div>
+                        <br><br><div class="row" >
+                                <legend class="col-form-label col-sm-5 pt-0">Ingredientes a utilizar en la pizza</legend>
+                                <div class="col-sm-12">
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="quesoMozarella" >
+                                    <label class="form-check-label" for="quesoMozarella">
+                                      Queso Mozarella
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="quesoGouda" >
+                                    <label class="form-check-label" for="quesoGouda">
+                                      Queso Gouda
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="quesoColby" >
+                                    <label class="form-check-label" for="quesoColby">
+                                     Queso Colby
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                        <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="quesoProvolone" >
+                                        <label class="form-check-label" for="quesoProvolone">
+                                          Queso Provolone
+                                        </label>
+                                      </div>
+                                </div>
+                          </div>
+                          <div class="row" >
+                                <div class="col-sm-12">
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="jamon" >
+                                    <label class="form-check-label" for="jamon">
+                                      Jamon
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="peperoni" >
+                                    <label class="form-check-label" for="peperoni">
+                                      Peperoni
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="tocino" >
+                                    <label class="form-check-label" for="tocino">
+                                     Tocino
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                        <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="carneRes" >
+                                        <label class="form-check-label" for="carneRes">
+                                         Carne de Res
+                                        </label>
+                                      </div>
+                                </div>
+                          </div>
+                          <div class="row" >
+                                <div class="col-sm-12">
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="salchItalina" >
+                                    <label class="form-check-label" for="salchItalina">
+                                      Salchicha Italina
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="piña" >
+                                    <label class="form-check-label" for="piña">
+                                      Piña
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="chVerde" >
+                                    <label class="form-check-label" for="chVerde">
+                                     Chile pimiento verde
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                        <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="chRojo" >
+                                        <label class="form-check-label" for="chRojo">
+                                         Chile pimiento Rojo
+                                        </label>
+                                      </div>
+                                </div>
+                          </div>
+                          <div class="row" >
+                                <div class="col-sm-12">
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="champiñones" >
+                                    <label class="form-check-label" for="champiñones">
+                                      Champiñones
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="pollo" >
+                                    <label class="form-check-label" for="pollo">
+                                      Pollo
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="salsaRoja" >
+                                    <label class="form-check-label" for="salsaRoja">
+                                     Salsa Roja
+                                    </label>
+                                  </div>
+                                  <div class="form-check col-md-3">
+                                        <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="salsaBlanca" >
+                                        <label class="form-check-label" for="salsaBlanca">
+                                         Salsa Blanca
+                                        </label>
+                                      </div>
+                                </div>
+                          </div>
+                          <br><button type="submit" class="btn btn-primary" onclick="">Submit</button>
+                  </form>
+            
+            
+            
+
+</body>
