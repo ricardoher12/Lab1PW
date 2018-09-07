@@ -31,7 +31,7 @@
         <section>
             <div class="jumbotron" >
                 <h1 class="display-4" >Pizza Maker</h1>                         
-                <p class="lead">Crea las recetas mas originales jamás nunca antes vistas</p> 
+                <p class="lead">Consulta (admira su orginalidad), modifica (vuelve mas originales) y elimina (eran demasiado originales) tus recetas</p> 
             </div>
         </section>
                     <form id="formulario">
@@ -323,7 +323,12 @@
                             </div>
                           </div>
                     </div>
-                          <br><button type="submit" class="btn btn-primary" onclick="limpiarFormulario()">Submit</button>
+                    <div style="float:none;">
+                          <br><br><button type="button" class="btn btn-primary" onclick="consultaPizza()">Consultar</button>
+                          <button type="button" class="btn btn-warning" onclick="Mensaje(0)">Modificar</button>
+                          <button type="button" class="btn btn-danger" onclick="Mensaje(1)">Eliminar</button>
+                          <button type="button" class="btn btn-primary" onclick="limpiarFormulario()">Limpiar Formulario</button>
+                    </div>
                   </form>
                 </div>
 </body>
