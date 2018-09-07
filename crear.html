@@ -1,13 +1,15 @@
 <!DOCTYPE html>
  <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
-    <script src="javascript/funciones.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+  <script src="javascript/funciones.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black; ">
+        <nav class="navbar navbar-inverse navbar-static-top bg-light" style="background-color: black; ">
                 <div class="container">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="index.html">Pizza Maker</a>
@@ -22,19 +24,17 @@
                         <li class="nav-item active">
                             <a href="#">Consultar</a>
                         </li>
-                        <li class="nav-item active">
-                            <a href="#">Modificar</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a href="#">Borrar</a>
-                        </li>
-                        
                     </ul>
                 </div>
-            </nav> 
-        
-        
-            <form id="formulario">
+            </nav>
+        <div class="container">
+        <section>
+            <div class="jumbotron" >
+                <h1 class="display-4" >Pizza Maker</h1>                         
+                <p class="lead">Crea las recetas mas originales jamás nunca antes vistas</p> 
+            </div>
+        </section>
+                    <form id="formulario">
                     <div class="form-group">
                         <div class="col-md-6 mb-3">
                             <label for="nameID">Nombre</label>
@@ -50,16 +50,16 @@
                    <br><br><div class="form-group">
                         <div class="col-md-8 mb-3"> 
                             <label for="receta">Nombre de la recta</label>
-                            <input type="text" class="form-control" id="receta" maxlength="150" placeholder="Recipe ID">
+                            <input type="text" class="form-control" id="receta" maxlength="150" placeholder="Enter your recipe's name">
                             <small id="recetaHelp" class="form-text text-muted">Ingresa el nombre de tu receta</small>
                         </div>
                         <div class="col-md-4 mb-3"> 
-                                <label for="recetaID">Nombre de la recta</label>
+                                <label for="recetaID">ID de la receta </label>
                                 <input type="text" class="form-control" id="recetaID" maxlength="3" placeholder="Recipe ID">
                                 <small id="recetaIDHelp" class="form-text text-muted">Ingresa un numero como ID</small>
                             </div>
                     </div>
-                    <br><br><div class="row" >
+                    <br><div class="row" >
                             <legend class="col-form-label col-sm-6 pt-0">Tamaño de la pizza</legend>
                             <legend class="col-form-label col-sm-6 pt-0">Forma de la pizza</legend>
                             <div class="col-sm-12">
@@ -109,7 +109,24 @@
                                       </div>
                                     </div>
                                 </div>
-                        <br><br><div class="row" >
+                               <br><div class="row" >
+                                    <legend class="col-form-label col-sm-6 pt-0">Salsa de la pizza</legend>
+                                    <div class="col-sm-12">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridSalsa"  id="salsaRoja" value="0" checked>
+                                        <label class="form-check-label" for="salsaRoja">
+                                          Salsa Roja
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridSalsa" id="salsaBlanca" value="1">
+                                        <label class="form-check-label" for="salsaBlanca">
+                                          Salsa Blanca
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                        <br><div class="row" >
                                 <legend class="col-form-label col-sm-5 pt-0">Ingredientes a utilizar en la pizza</legend>
                                 <div class="col-sm-12">
                                   <div class="form-check col-md-3">
@@ -209,23 +226,104 @@
                                     </label>
                                   </div>
                                   <div class="form-check col-md-3">
-                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="salsaRoja" >
-                                    <label class="form-check-label" for="salsaRoja">
-                                     Salsa Roja
+                                    <input class="form-check-input" type="checkbox" name="gridIngredientes" id="anchoas" >
+                                    <label class="form-check-label" for="anchoas">
+                                     Anchoas
                                     </label>
                                   </div>
                                   <div class="form-check col-md-3">
-                                        <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="salsaBlanca" >
-                                        <label class="form-check-label" for="salsaBlanca">
-                                         Salsa Blanca
+                                        <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="aceitunasNegras" >
+                                        <label class="form-check-label" for="aceitunasNegras">
+                                         Aceitunas Negras
                                         </label>
                                       </div>
                                 </div>
                           </div>
-                          <br><button type="submit" class="btn btn-primary" onclick="">Submit</button>
+                          <div class="row" >
+                              <div class="col-sm-12">
+                                <div class="form-check col-md-3">
+                                  <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="cebolla" >
+                                  <label class="form-check-label" for="cebolla">
+                                    Cebolla
+                                  </label>
+                                </div>
+                                <div class="form-check col-md-3">
+                                  <input class="form-check-input" type="checkbox" name="gridIngredientes" id="cebollaMorada" >
+                                  <label class="form-check-label" for="cebollaMorada">
+                                    Cebolla Morada
+                                  </label>
+                                </div>
+                                <div class="form-check col-md-3">
+                                  <input class="form-check-input" type="checkbox" name="gridIngredientes" id="chorizo" >
+                                  <label class="form-check-label" for="chorizo">
+                                   Chorizo
+                                  </label>
+                                </div>
+                                <div class="form-check col-md-3">
+                                  <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="albahaca" >
+                                  <label class="form-check-label" for="albahaca">
+                                    Albahaca
+                                  </label>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-sm-12">
+                              <div class="form-check col-md-3">
+                                <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="tomate" >
+                                <label class="form-check-label" for="tomate">
+                                  Tomate
+                                </label>
+                              </div>
+                              <div class="form-check col-md-3">
+                                <input class="form-check-input" type="checkbox" name="gridIngredientes" id="espinaca" >
+                                <label class="form-check-label" for="espinaca">
+                                  Espinaca
+                                </label>
+                              </div>
+                              <div class="form-check col-md-3">
+                                <input class="form-check-input" type="checkbox" name="gridIngredientes" id="brocoli" >
+                                <label class="form-check-label" for="brocoli">
+                                 Brocoli
+                                </label>
+                              </div>
+                              <div class="form-check col-md-3">
+                                <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="salsaBarcacoa" >
+                                <label class="form-check-label" for="salsaBarcacoa">
+                                  Salsa Barbacoa
+                                </label>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="row" >
+                          <div class="col-sm-12">
+                            <div class="form-check col-md-3">
+                              <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="camarones" >
+                              <label class="form-check-label" for="camarones">
+                                Camarones
+                              </label>
+                            </div>
+                            <div class="form-check col-md-3">
+                              <input class="form-check-input" type="checkbox" name="gridIngredientes" id="pulpo" >
+                              <label class="form-check-label" for="pulpo">
+                                Pulpo
+                              </label>
+                            </div>
+                            <div class="form-check col-md-3">
+                              <input class="form-check-input" type="checkbox" name="gridIngredientes" id="salami" >
+                              <label class="form-check-label" for="salami">
+                               Salami
+                              </label>
+                            </div>
+                            <div class="form-check col-md-3">
+                              <input class="form-check-input" type="checkbox" name="gridIngredientes"  id="esparragos" >
+                              <label class="form-check-label" for="esparragos">
+                                Esparragos
+                              </label>
+                            </div>
+                          </div>
+                    </div>
+                          <br><button type="submit" class="btn btn-primary" onclick="limpiarFormulario()">Submit</button>
                   </form>
-            
-            
-            
-
+                </div>
 </body>
