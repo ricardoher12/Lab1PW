@@ -43,7 +43,7 @@
                         </div>  
                         <div class="col-md-6 mb-3">
                                 <label for="apellidoID">Apellido</label>
-                                <input type="tel" class="form-control" id="apellidoID" maxlength="150" aria-describedby="emailHelp" placeholder="Enter your lastname">
+                                <input type="tel" class="form-control" id="apellidoID" maxlength="150" aria-describedby="lastnameHelp" placeholder="Enter your lastname">
                                 <small id="lastnameHelp" class="form-text text-muted">Ingresa tus apellidos</small>
                             </div>  
                     </div>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="col-md-4 mb-3"> 
                                 <label for="recetaID">ID de la receta </label>
-                                <input type="text" class="form-control" id="recetaID" maxlength="3" placeholder="Recipe ID">
+                                <input type="text" class="form-control" id="recetaID" maxlength="3" placeholder="Recipe ID" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                 <small id="recetaIDHelp" class="form-text text-muted">Ingresa un numero como ID</small>
                             </div>
                     </div>
